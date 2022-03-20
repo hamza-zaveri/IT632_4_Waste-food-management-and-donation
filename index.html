@@ -25,7 +25,14 @@
              <div class='menu-list-item'> Feed </div>
              <div class='menu-list-item'> About us </div>
              <div class='menu-list-item'> Contact us </div>
-             <div class='menu-list-item'><a href="login.html" role="button" aria-pressed="true" style="text-decoration:none;color: black;">Register/sign in</a></div>
+	     <div id="uStatus" class='menu-list-item'></div>
+	     <script>
+		if(sessionStorage.getItem("username")){
+		   document.getElementById("uStatus").innerHTML ="Welcome, "+ sessionStorage.getItem("username");
+		}else{
+		  document.getElementById("uStatus").innerHTML = "<a href='registration.html' style='text-decoration:none;color:black;'>Register/Login</a>";
+		}
+	     </script>
       </div>  
   </div>
   <div class='bg'>
