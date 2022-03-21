@@ -13,7 +13,6 @@
     <script src="config.js"></script>
     <style>
         #formValidate,
-        #pwdValidate,
         #validateMsg {
             visibility: hidden;
             margin-top: -20px;
@@ -237,7 +236,6 @@
                                 <!------------------End of Edit-------------->
                                 <div class="modal-body">
                                     <h3 class="title">Sign In</h3>
-                                    <span id="formValidate">Please fillup the form</span>
                                     <div class="form-group">
                                         <select class="form-control" name="" id="role" style="border:1px solid;padding:7px;background-color: #3B4A3F;color: #CED8D1; box-shadow:none;">
                                             <option value="" disabled selected>Who are you?</option>
@@ -249,14 +247,9 @@
                                     <div class="form-group">
                                         <input type="email" id="email" class="form-control" placeholder="Email"
                                             pattern="[^@\s]+@[^@\s]+" title="Invalid email address">
-                                        <span id="validateMsg" class="help-block">Please Enter Valid Email
-                                            Address!</span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" id="pwd" class="form-control" placeholder="Password">
-                                        <span id="pwdValidate" class="help-block">Please Enter Min 1 uppercase letter,
-                                            Min 1 lowercase letter, Min 1 special character, Min 1 number, Min 8
-                                            characters, Max 30 characters.:!</span>
+                                        <input type="password" value="" id="pwd" class="form-control" placeholder="Password">
                                     </div>
                                     <button class="btn" id="signin">Sign In</button>
                                     <a href="" class="forgot-pass">Forgot Password?</a>
@@ -266,10 +259,9 @@
                         </div>
                     </div>
                     <script>
-                    if(!sessionStorage.getItem("username")){
+                    if(sessionStorage.getItem("username")){
 
                         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                        var pwdFormate = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
 
                         signin.onclick = function () {
 
@@ -277,18 +269,15 @@
                             var pwd = document.getElementById("pwd").value;
                             var role = document.getElementById("role").value;
 
-                            if (role == "" && email == "" && pwd == "") {
-                                document.getElementById("formValidate").style.visibility = "visible";
+                            if (role == "" && email == "") {
+                               alert("Please Select Who are you !");
                             } else {
-                                document.getElementById("formValidate").style.visibility = "hidden";
+                                
                                 if (!email.match(mailformat)) {
-                                    document.getElementById("validateMsg").style.visibility = "visible";
-                                } else if (!pwd.match(pwdFormate)) {
-                                    document.getElementById("pwdValidate").style.visibility = "visible";
-                                    document.getElementById("validateMsg").style.visibility = "hidden";
+                                    alert("Please Enter Valid Email Address!");    
+                                }else if(pwd==""){
+                                    alert("Please Enter Password!");
                                 } else {
-                                    document.getElementById("pwdValidate").style.visibility = "hidden";
-                                    document.getElementById("validateMsg").style.visibility = "hidden";
                                     firebase.database().ref(role).orderByChild("email").equalTo(email).once("value", snapshot => {
                                         if (snapshot.exists()) {
                                             firebase.database().ref(role).orderByChild("password").equalTo(pwd).once("value",snap=>{
