@@ -220,6 +220,12 @@ th {
   color: #b6c8bc;
   cursor: pointer;
 }
+.buttonact {
+  width: fit-content;
+  background: #3b4a3f;
+  color: #b6c8bc;
+  cursor: pointer;
+}
 
 .footermain {
   max-width: 100%;
@@ -265,4 +271,16 @@ th {
   display: flex;
   justify-content: space-between;
   text-align: right;
+}
+
+.cards
+{
+  margin: 5%;
+  width:90%;
+  height:fit-content;
+  background-color: #CED8D1;
+}
+td
+{
+  padding: 20px;
 }
