@@ -4,6 +4,7 @@
 202112061 - ZAVERI HAMZA ASIFBHAI 
 ->User Interface
 ->Registration pages(Frontend)
+->Restaurant Posting(Frontend) and JS validation
 
 202112065 - KALARIYA MEET HARESHBHAI 
 ->JS validation for login and registration page
@@ -18,18 +19,27 @@
 
 202112076 - SARVAIYA ANIKET MAHESHKUMAR
 ->Documentation
+->About us page(Frontend)
+->Contact us page(Frontend)
+->Restaurant profile(Frontend)
+->NGO profile(Frontend)
 
 202112078 - JAYKUMAR SAVANI
 ->Documentation
+->About us page(Frontend)
+->Contact us page(Frontend)
+->Restaurant profile(Frontend)
+->NGO profile(Frontend)
 
 202112087 - KARMUR PARTH RAMSIBHAI 
 ->Documentation
-->User Interface
 ->NGO delivery guy(Frontend)
+->NGO Adding donation(Frontend)
 
 202112089 - NEELAM KHUSHIRAM GAGNANI 
-->Login Page(Frontend)
 ->Presentation
+->Login Page(Frontend)
+->Homepage(Frontend)
 
 202112110 - THAKKAR KEYUR NARESHBHAI 
 ->Documentation
@@ -39,3 +49,11 @@
 202112117 - ABHISHEK SINGH CHAUHAN
 ->Documentation
 ->NGO delivery guy(Frontend)
+->NGO Adding donation(Frontend)
+
+Making of class analysis diagram
+->Post of donation and View NGO's details : Aniket and Jay
+->Login : Meet
+->Registration and Manage/Review all users : Hamza
+->Feedback and Query : Deepak and Neelam
+->View Restaurant/Caterers details and view feeds of donation : Deepak
