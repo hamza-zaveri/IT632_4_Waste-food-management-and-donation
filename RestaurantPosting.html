@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Registration Page 3</title>
+	<title>Restaurant Posting</title>
 
 	<!-- CSS -->
 	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
@@ -24,11 +24,29 @@
 		<div class="row h-100 justify-content-center align-items-center">
 			<div class="col-md-6 col-lg-6">
 				<!-- Form -->
-				<h1 class="py-2"><b id="r"></b></h1>
-				<script>let personName = sessionStorage.getItem("role"); document.getElementById("r").innerHTML = personName;</script>
-				<p class="description py-2">Fill in the data for profile. It will take a couple of minutes.</p>
+                <h1 class="py-2"><b>Donation Information</b></h1>
+				<p class="description py-2">Enter the details of food you are donating</p>
 				<!-- Input fields -->
-				<div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
+                <div class="form-example card p-4 mb-4" style="background-color:#CED8D1;border: #000000 1px solid;">
+                    <div class="form-group">
+                        <input type="number" class="form-control py-4" id="quantity" placeholder="Quantity (In dishes - how many people can eat?)" name="quantity"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-4" id="type" placeholder="Type of Food (e.g Rice and Gravy)" name="type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appt" class = "pr-2 pt-2 pl-2" style="float: left;color: rgb(113, 113, 113);">Cooked time:</label>
+                        <input type="time" class="form-control" id="cooked_time" placeholder="Cooked time" name="cooked_time" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="expiry_time" placeholder="Expiry time (in hours)" name="expiry_time" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-4" id="hygiene" placeholder="Hygiene level(rate it out of 5)" name="hygiene" value="5" min="1" max="5" required>
+                    </div>
+                    </div>
+                <div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
 				<h3 class="py-2"><strong>Delivery address</strong></h3>
 				<div class="form-group">
 					<input type="text" class="form-control py-4" id="address" placeholder="Address" name="address"
@@ -51,6 +69,7 @@
 				<button class="btn" id="saveData" aria-pressed="true" style="background-color: #B6C8BC;"> Go Next <span
 						class="iconify" data-icon="bi:arrow-right-short" data-width="20"
 						data-height="20"></span></button>
+                </div>
 				<script>
 					var zipcodeFormate = /(^\d{6}$)|(^\d{6}-\d{4}$)/;
 					saveData.onclick = function () {
@@ -96,10 +115,10 @@
 			</div>
 		</div>
 	</div>
-</div>
+
 
 	<!-- Javascript -->
-
+    <script src="js/addons/rating.js"></script>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>

@@ -10,6 +10,7 @@
 
 	<!-- CSS -->
 	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link href = 'css/style.css' rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -30,7 +31,7 @@
 					All you need is a phone number and e-mail </p>
 
 				<!-- Input fields -->
-
+				<div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
 				<select class="custom-select my-3 mr-sm-5 " id="inlineFormCustomSelectPref"
 					style="background-color: #3B4A3F;color: #CED8D1; box-shadow:none;" required>
 					<option value="" disabled selected>Who are you?</option>
@@ -39,7 +40,7 @@
 					<option value="Caterer">Caterer</option>
 				</select>
 				<div class="form-group">
-					<input type="number" class="form-control py-4" id="number" placeholder="Enter phone number"
+					<input type="text" class="form-control py-4" id="number" placeholder="Enter phone number"
 						name="number" pattern="[7-9]{1}[0-9]{9}"
 						title="Phone number with 7-9 and remaing 9 digit with 0-9" required>
 				</div>
@@ -102,6 +103,7 @@
 				</script>
 			</div>
 		</div>
+	</div>
 	</div>
 
 
