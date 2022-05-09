@@ -1,0 +1,39 @@
+body {
+  background-color:#CED8D1;
+  font-family: 'Inter';
+}
+.btn_icon{
+ background-color:#CED8D1;
+ color: #3B4A3F;
+ position: absolute;
+ width: 60px;
+ height: 60px;
+ left: 80px;
+ top: 60px;
+ border: none;
+}
+.btn_icon:hover{
+ color: #3B4A3F;
+ position: absolute;
+ width: 65px;
+ height: 65px;
+ left: 80px;
+ top: 60px;
+ border: none;
+}
+.form-control {
+background: transparent;
+border: none;
+border-bottom: 1px solid #000000;
+-webkit-box-shadow: none;
+box-shadow: none;
+border-radius: 0;
+}
+.form-control:focus {
+ background-color: #B6C8BC!important;
+   border-color: #3B4A3F;
+}
+.form-control:focus:active {
+ background-color: #B6C8BC!important;
+   border-color: #3B4A3F;
+}

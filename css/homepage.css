@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&family=Ultra&display=swap");
+body {
+  margin: 0%;
+}
+.main-navbar {
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.menu-list {
+  display: flex;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  margin-right: 2em;
+  gap: 1em;
+}
+
+.menu-list-item:hover {
+  color: #9db0a3;
+  cursor: pointer;
+}
+
+.bg {
+  position: relative;
+  text-align: center;
+}
+.bgimg {
+  width: 100%;
+  max-height: 350px;
+  background: rgba(157, 176, 163, 0.5);
+}
+.bgtext {
+  position: absolute;
+  height: 72px;
+  width: 500px;
+  left: 65px;
+  top: 20%;
+  right: 686px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #3b4a3f;
+}
+.feedback-main {
+  max-width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.feedbackdonors {
+  display: flex;
+  background: rgba(59, 74, 63, 0.5);
+
+  width: 100%;
+}
+.feedbacktext {
+  flex: 1;
+  padding-top: 2%;
+  padding-left: 1%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+
+  color: #3b4a3f;
+}
+.feedbackinfo {
+  flex: 2;
+}
+.feedbackngo {
+  display: flex;
+  background: rgba(157, 176, 163, 0.5);
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.feedbackinfo2 {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  /* yha se  */
+}
+.feedbacktext2 {
+  flex: 1;
+  padding-top: 2%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #3b4a3f;
+}
+
+.counter {
+  max-width: 100%;
+  text-align: center;
+  max-height: 50%;
+}
+.counter table {
+  padding-left: 10%;
+}
+.counter table td,
+th {
+  width: 25%;
+  padding: 1%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  color: #3b4a3f;
+}
+
+.counter table th {
+  font-size: 30px;
+}
+.counter table td {
+  padding-left: 15%;
+  font-size: 40px;
+}
+
+.feedback-card {
+  max-width: 100%;
+  background: #ffffff;
+  margin: 3%;
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.person-image {
+  margin: 2%;
+  max-height: 50%;
+  width: 15%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid rgba(0, 0, 0, 0.34);
+}
+.person-text {
+  padding: 5%;
+  width: 500px;
+}
+.person-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  text-align: justify;
+}
+.person-occu {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #000000;
+}
+.person-desc {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: justify;
+  padding: 2%;
+}
+
+.wrapper {
+  background: rgba(59, 74, 63, 0.5);
+  max-width: 100%;
+  margin: 2%;
+}
+.boldtext {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  color: #3b4a3f;
+  padding-top: 5%;
+}
+.smalltext {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #3b4a3f;
+}
+.button1 {
+  height: 40px;
+  left: 517px;
+  right: 500px;
+  top: 1490px;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  background: #3b4a3f;
+  color: #b6c8bc;
+  cursor: pointer;
+}
+.buttonact {
+  width: fit-content;
+  background: #3b4a3f;
+  color: #b6c8bc;
+  cursor: pointer;
+}
+
+.footermain {
+  max-width: 100%;
+  background: rgba(157, 176, 163, 0.5);
+  display: flex;
+  justify-content: space-between;
+}
+.footerlogo {
+  padding-top: 3%;
+  padding-left: 2%;
+}
+.footernav,
+.footerlist {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: black;
+  font-weight: bolder;
+}
+.footernav ul,
+.footerlist ul {
+  list-style-type: none;
+}
+
+.footernav ul li:hover,
+.footerlist ul li:hover {
+  color: #3b4a3f;
+  cursor: pointer;
+}
+.footercontact {
+  text-align: right;
+  margin: 2%;
+}
+.footeremail {
+  text-decoration: underline;
+  padding-bottom: 10px;
+}
+.footno {
+  font-weight: bold;
+}
+
+.footerIcon {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.cards
+{
+  margin: 5%;
+  width:90%;
+  height:fit-content;
+  background-color: #CED8D1;
+}
+td
+{
+  padding: 20px;
+}

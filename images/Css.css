@@ -1,0 +1,31 @@
+.tickmarks {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 1em;
+    justify-items: center;
+    margin-top: 1.5em;
+    color: var(--accent-color-1);
+    font-size: 90%;
+    font-weight: bold;
+}
+.feedbackForm h2 {
+    font-size: 100%;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--secondary-color);
+}
+.legend{
+    font-size: 80%;
+}
+.form-row{
+    width: 90%;
+}
+.header h1 {
+    margin: 1em 1em;
+    font-size: 2.1rem;
+}
+.header img {
+    height: auto;
+    max-width: 90%;
+    border-radius: 50%;
+}

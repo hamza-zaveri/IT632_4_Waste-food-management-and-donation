@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Restaurant Posting</title>
+
+	<!-- CSS -->
+	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+	<script src="js/config.js"></script>
+
+<body class="h-100">
+	<a href="registration2.html" class="btn mt-4" role="button" aria-pressed="true">
+		<span class="iconify btn_icon" data-icon="bi:arrow-left-short" data-width="100" data-height="100"></span></a>
+	<div class="container h-100">
+		<div class="row h-100 justify-content-center align-items-center">
+			<div class="col-md-6 col-lg-6">
+				<!-- Form -->
+                <h1 class="py-2"><b>Donation Information</b></h1>
+				<p class="description py-2">Enter the details of food you are donating</p>
+				<!-- Input fields -->
+                <div class="form-example card p-4 mb-4" style="background-color:#CED8D1;border: #000000 1px solid;">
+                    <div class="form-group">
+                        <input type="number" class="form-control py-4" id="quantity" placeholder="Quantity (In dishes - how many people can eat?)" name="quantity"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control py-4" id="type" placeholder="Type of Food (e.g Rice and Gravy)" name="type" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appt" class = "pr-2 pt-2 pl-2" style="float: left;color: rgb(113, 113, 113);">Cooked time:</label>
+                        <input type="time" class="form-control" id="cooked_time" placeholder="Cooked time" name="cooked_time" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="expiry_time" placeholder="Expiry time (in hours)" name="expiry_time" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control py-4" id="hygiene" placeholder="Hygiene level(rate it out of 5)" name="hygiene" value="5" min="1" max="5" required>
+                    </div>
+                    </div>
+					<div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
+						<h3 class="py-2"><strong>Delivery address</strong></h3>
+						<div class="form-group">
+							<input type="text" class="form-control py-4" id="address" placeholder="Address" name="address"
+								required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control py-4" id="city" placeholder="City" name="city" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control py-4" id="State" placeholder="State" name="country" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control py-4" id="zipcode" placeholder="Zip Code" name="zipcode"
+								pattern="[0-9]{6}" title="Five digit zip code" required>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control py-4" id="mark" placeholder="Any particular marks(optional)"
+								name="mark">
+						</div>
+						<button class="btn" id="saveData" aria-pressed="true" style="background-color: #B6C8BC;"> Go Next <span
+								class="iconify" data-icon="bi:arrow-right-short" data-width="20"
+								data-height="20"></span>
+						</button>
+					</div>
+			</div>
+		</div>
+	</div>
+	<!-- Resturant Posting Js Backend Include -->
+	<script src="js/RestaurantPosting.js"></script>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+	<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+</body>
+
+</html>
