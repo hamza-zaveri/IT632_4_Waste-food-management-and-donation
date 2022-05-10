@@ -1,28 +1,30 @@
 document.getElementById("ngoname").innerHTML = sessionStorage.getItem("username") + " NGO";
 let counterno = 0;
+let dish = 0;
 firebase.database().ref("Restaurant").once("value", function (snapshots) {
-  snapshots.forEach(function (chilsSnapshot) {
+   snapshots.forEach(function (chilsSnapshot) {
     firebase.database().ref("Restaurant/" + chilsSnapshot.key + "/Donation").once('value', function (snap) {
       counterno = (snap.numChildren());
-      $({ Counter: 0 }).animate({
-        Counter: counterno
-      }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function () {
-          $('#NoOfFeed').text(Math.ceil(this.Counter));
-          $('#NoOfFeed').css('color', 'blue');
-        }
-      });
       var content = '';    
       var hygieneLevelEdit = "";
       var ngStatus = "";
+      let numOfDdone = 0;
+      let numOfFailed = 0;
       snap.forEach(function (childCheck) {
         var val = childCheck.val();
-        let numOfDdone = 0;
-        let numOfFailed = 0;
         if (childCheck.val().NGOStatus == "Accept") {
           numOfDdone++;
+          dish += parseInt(childCheck.val().Quantity);
+          $({ Counter: 0 }).animate({
+            Counter: dish
+          }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function () {
+              $('#NoOfFeed').text(Math.ceil(this.Counter));
+              $('#NoOfFeed').css('color', 'blue');
+            }
+        });
           $({ Counter: 0 }).animate({
             Counter: numOfDdone
           }, {
