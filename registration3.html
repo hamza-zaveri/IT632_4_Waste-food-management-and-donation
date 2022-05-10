@@ -7,7 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<title>Registration Page 3</title>
-
+	<script>
+		// if(sessionStorage.getItem("role")){
+		// 	window.location.href = "index.html";
+		// }
+	</script>
 	<!-- CSS -->
 	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -15,7 +19,7 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
-	<script src="config.js"></script>
+	<script src="js/config.js"></script>
 
 <body class="h-100">
 	<a href="registration2.html" class="btn mt-4" role="button" aria-pressed="true">
@@ -52,6 +56,10 @@
 						class="iconify" data-icon="bi:arrow-right-short" data-width="20"
 						data-height="20"></span></button>
 				<script>
+				if(!sessionStorage.getItem("role")){
+					alert("Please fillup Full Registrtion Form!");
+					window.location.href = "registration.html";
+				}else{
 					var zipcodeFormate = /(^\d{6}$)|(^\d{6}-\d{4}$)/;
 					saveData.onclick = function () {
 						var output = "";
@@ -84,12 +92,15 @@
 									mark: output
 								}).then(() => {
 									alert("Dear, " + sessionStorage.getItem("username") + " Congratulations! You Have Successfully Registration!");
-									sessionStorage.clear();
+									sessionStorage.removeItem("email");
+									sessionStorage.removeItem("password");
+									sessionStorage.removeItem("region");
 									window.location.href = "index.html";
 								});
 							}
 						}
 					}
+				}
 				</script>
 				<!-- End input fields -->
 				<!-- Form end -->

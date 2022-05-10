@@ -16,8 +16,13 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
-	<script src="config.js"></script>
+	<script src="js/config.js"></script>
 </head>
+<script>
+	// if (sessionStorage.getItem("role")) {
+	// 	window.location.href = "index.html";
+	// }
+</script>
 
 <body class="h-100">
 	<a href="registration.html" class="btn mt-4" role="button" aria-pressed="true">
@@ -31,44 +36,53 @@
 				<p class="description py-2">Fill in the data for profile. It will take a couple of minutes.</p>
 				<!-- Input fields -->
 				<div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
-				<div class="form-group">
-					<input type="text" class="form-control py-4" id="name" placeholder="Enter Name" name="name"
-						required>
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control py-4" id="region"
-						placeholder="Enter region you are located in" name="region" required>
-				</div>
+					<div class="form-group">
+						<input type="text" class="form-control py-4" id="name" placeholder="Enter Name" name="name"
+							required>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control py-4" id="region"
+							placeholder="Enter region you are located in" name="region" required>
+					</div>
 
-				<button id="nxt" class="btn" aria-pressed="true" style="background-color: #B6C8BC;"> Go Next <span
-						class="iconify" data-icon="bi:arrow-right-short" data-width="20"
-						data-height="20"></span></button>
-				<script>
-					nxt.onclick = function () {
-						var name = document.getElementById("name").value;
-						var region = document.getElementById("region").value;
-						if (name == "" || region == "") {
-							alert("Please fillup the form!");
+					<button id="nxt" class="btn" aria-pressed="true" style="background-color: #B6C8BC;"> Go Next <span
+							class="iconify" data-icon="bi:arrow-right-short" data-width="20"
+							data-height="20"></span></button>
+					<script>
+						if (!sessionStorage.getItem("role")) {
+							alert("Please fillup First Registrtion Form!");
+							window.location.href = "registration.html";
 						} else {
-							firebase.database().ref(sessionStorage.getItem("role")).orderByChild("username").equalTo(name).once("value", snapshot => {
-								if (snapshot.exists()) {
-									alert("Username Address Already Taken....");
-									return true;
+							if (sessionStorage.getItem("role") != "") {
+								document.getElementById("name").value = sessionStorage.getItem("username", name);
+								document.getElementById("region").value = sessionStorage.getItem("region", region);
+							}
+							nxt.onclick = function () {
+								var name = document.getElementById("name").value;
+								var region = document.getElementById("region").value;
+								if (name == "" || region == "") {
+									alert("Please fillup the form!");
 								} else {
-									sessionStorage.setItem("username", name);
-									sessionStorage.setItem("region", region);
-									window.location.href = "registration3.html";
+									firebase.database().ref(sessionStorage.getItem("role")).orderByChild("username").equalTo(name).once("value", snapshot => {
+										if (snapshot.exists()) {
+											alert("Username Address Already Taken....");
+											return true;
+										} else {
+											sessionStorage.setItem("username", name);
+											sessionStorage.setItem("region", region);
+											window.location.href = "registration3.html";
+										}
+									});
 								}
-							});
+							}
 						}
-					}
-				</script>
-				<!-- End input fields -->
-				<!-- Form end -->
+					</script>
+					<!-- End input fields -->
+					<!-- Form end -->
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 	<!-- Javascript -->
 
