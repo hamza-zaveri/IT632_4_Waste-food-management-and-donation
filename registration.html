@@ -5,22 +5,30 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<title>Registration</title>
+	<script>
+		// if(sessionStorage.getItem("role")){
+		// 	window.location.href = "index.html";
+		// }
+	</script>
+	<title>Registration Step - 1</title>
+	
+    <!-- Website Icon  -->
+    <link rel="icon" href="images/logoicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.svg">
 
 	<!-- CSS -->
 	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-	<link href = 'css/style.css' rel="stylesheet">
+	<link href='css/style.css' rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
-	<script src="config.js"></script>
+	<script src="js/config.js"></script>
 </head>
 
 <body class="h-100">
-	<a href="login.html" class="btn mt-4" role="button" aria-pressed="true">
+	<a href="index.html" class="btn mt-4" role="button" aria-pressed="true">
 		<span class="iconify btn_icon" data-icon="bi:arrow-left-short" data-width="100" data-height="100"></span></a>
 	<div class="container h-100">
 		<div class="row h-100 justify-content-center align-items-center">
@@ -32,83 +40,90 @@
 
 				<!-- Input fields -->
 				<div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
-				<select class="custom-select my-3 mr-sm-5 " id="inlineFormCustomSelectPref"
-					style="background-color: #3B4A3F;color: #CED8D1; box-shadow:none;" required>
-					<option value="" disabled selected>Who are you?</option>
-					<option value="NGO">NGO</option>
-					<option value="Restaurant">Restaurant</option>
-					<option value="Caterer">Caterer</option>
-				</select>
-				<div class="form-group">
-					<input type="text" class="form-control py-4" id="number" placeholder="Enter phone number"
-						name="number" pattern="[7-9]{1}[0-9]{9}"
-						title="Phone number with 7-9 and remaing 9 digit with 0-9" required>
-				</div>
-				<div class="form-group">
-					<input type="email" class="form-control py-4" id="email" placeholder="Enter your email" name="email"
-						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control py-4" id="password" placeholder="Set a Password"
-						name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" title="Password should be At least 1 Uppercase At least 1 Lowercase
+					<select class="custom-select my-3 mr-sm-5 shadow-none" id="inlineFormCustomSelectPref"
+						style="background-color: #3B4A3F;color: #CED8D1; box-shadow:none;" required>
+						<option value="" disabled selected>Who are you?</option>
+						<option value="NGO">NGO</option>
+						<option value="Restaurant">Restaurant</option>
+						<option value="Caterer">Caterer</option>
+					</select>
+					<div class="form-group">
+						<input type="text" class="form-control py-4 shadow-none" id="number" placeholder="Enter phone number"
+							name="number" pattern="[7-9]{1}[0-9]{9}"
+							title="Phone number with 7-9 and remaing 9 digit with 0-9" required>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control py-4 shadow-none" id="email" placeholder="Enter your email"
+							name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control py-4 shadow-none" id="password" placeholder="Set a Password"
+							name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+							title="Password should be At least 1 Uppercase At least 1 Lowercase
 							At least 1 Number,At least 1 Symbol, symbol allowed-->!@#$%^&*_=+- Min 8 chars and Max 12 chars" required>
+					</div>
+					<button class="btn shadow-none" aria-pressed="true" id="nxtBtn" style="background-color: #B6C8BC;"> Go Next
+						<span class="iconify" data-icon="bi:arrow-right-short" data-width="20"
+							data-height="20"></span></button>
 				</div>
-				<button class="btn" aria-pressed="true" id="nxtBtn" style="background-color: #B6C8BC;"> Go Next <span
-						class="iconify" data-icon="bi:arrow-right-short" data-width="20"
-						data-height="20"></span></button>
-
-				<script>
-					var numberFomrate = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
-					var emailFormate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-					var pwdFormate = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
-					nxtBtn.onclick = function () {
-						var role = document.getElementById("inlineFormCustomSelectPref").value;
-						var mNumber = document.getElementById("number").value;
-						var email = document.getElementById("email").value;
-						var password = document.getElementById("password").value;
-						if (role == "") {
-							alert("Please Select the Role.");
-						} else if (mNumber == "" && email == "" && password == "") {
-							alert("Please Complete Fillup form");
-						} else {
-							if (!mNumber.match(numberFomrate)) {
-								alert("Please Enter Valid Mobile Number!");
-							} else if (!email.match(emailFormate)) {
-								alert("Enter Valid Email Address.");
-							} else if (!password.match(pwdFormate)) {
-								alert("Please Enter Min 1 uppercase letter,Min 1 lowercase letter, Min 1 special character, Min 1 number, Min 8 characters, Max 30 characters Password:!");
-							} else {
-								firebase.database().ref(role).orderByChild("mobilenumber").equalTo(mNumber).once("value", snapshot => {
-									if (snapshot.exists()) {
-										alert("Mobile Number Already Registered....");
-										return true;
-									} else {
-										firebase.database().ref(role).orderByChild("email").equalTo(email).once("value", snapshot => {
-											if (snapshot.exists()) {
-												alert("Email Address Already Registered....");
-												return true;
-											} else {
-												sessionStorage.setItem("role", role);
-												sessionStorage.setItem("mnumber", mNumber);
-												sessionStorage.setItem("email", email);
-												sessionStorage.setItem("password", password);
-												window.location.href = "registration2.html";
-											}
-										});
-									}
-								});
-							}
-						}
-					}
-				</script>
 			</div>
 		</div>
-	</div>
 	</div>
 
 
 	<!-- Javascript -->
-
+	<script>
+		
+		var numberFomrate = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
+		var emailFormate = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		var pwdFormate = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,30}$/;
+		
+		if(sessionStorage.getItem("role")!=null){
+			var role = document.getElementById("inlineFormCustomSelectPref").value = sessionStorage.getItem("role", role);;
+			var mNumber = document.getElementById("number").value = sessionStorage.getItem("mnumber", mNumber);;
+			var email = document.getElementById("email").value = sessionStorage.getItem("email", email);;
+			var password = document.getElementById("password").value = sessionStorage.getItem("password", password);;
+		}
+		nxtBtn.onclick = function () {
+			var role = document.getElementById("inlineFormCustomSelectPref").value;
+			var mNumber = document.getElementById("number").value;
+			var email = document.getElementById("email").value;
+			var password = document.getElementById("password").value;
+			if (role == "") {
+				alert("Please select the role!");
+			} else if (mNumber == "" && email == "" && password == "") {
+				alert("Please fillup the entire form!");
+			} else {
+				if (!mNumber.match(numberFomrate)) {
+					alert("Please enter valid mobile number!");
+				} else if (!email.match(emailFormate)) {
+					alert("Please enter valid email address!");
+				} else if (!password.match(pwdFormate)) {
+					alert("Please enter minimum 1 uppercase letter, minimum 1 lowercase letter, minimum 1 special character, minimum 1 number, minimum 8 characters and maximum 30 characters password!");
+				} else {
+					firebase.database().ref(role).orderByChild("mobilenumber").equalTo(mNumber).once("value", snapshot => {
+						if (snapshot.exists()) {
+							alert("Mobile number already registered!");
+							return true;
+						} else {
+							firebase.database().ref(role).orderByChild("email").equalTo(email).once("value", snapshot => {
+								if (snapshot.exists()) {
+									alert("Email address already registered....");
+									return true;
+								} else {
+									sessionStorage.setItem("role", role);
+									sessionStorage.setItem("mnumber", mNumber);
+									sessionStorage.setItem("email", email);
+									sessionStorage.setItem("password", password);
+									window.location.href = "registration2.html";
+								}
+							});
+						}
+					});
+				}
+			}
+		}
+	</script>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>

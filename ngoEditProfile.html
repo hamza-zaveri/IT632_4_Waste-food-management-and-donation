@@ -5,8 +5,12 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="images/logoicon.svg" type="image/x-icon">
 
 	<title>Edit Profile</title>
+
+    <!-- Website Icon  -->
+    <link rel="shortcut icon" href="images/logoicon.svg">
 
 	<!-- CSS -->
 	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
@@ -20,7 +24,7 @@
 </head>
 
 <body class="h-100">
-	<a href="RestaurantCaterer.html" class="btn mt-4" role="button" aria-pressed="true">
+	<a href="NGO.html" class="btn mt-4" role="button" aria-pressed="true">
 		<span class="iconify btn_icon" data-icon="bi:arrow-left-short" data-width="100" data-height="100"></span></a>
 	<div class="container h-100">
 		<div class="row h-100 justify-content-center align-items-center">
@@ -28,60 +32,61 @@
                 <!-- Form -->
                 <h1>Edit Profile</h1>
                     <!-- Input fields -->
-                    <div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
+                    <div class="form-example card p-4 mt-4" style="background-color:#CED8D1;border: #000000 1px solid;">
                         <h3><script>let personName = sessionStorage.getItem("role"); document.getElementById("r").innerHTML = personName;</script>
                         </h3>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="name" placeholder="Enter Name" name="name"
+                            <input type="text" class="form-control py-4 shadow-none" id="name" placeholder="Enter Name" name="name"
                                 required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="region"
+                            <input type="text" class="form-control py-4 shadow-none" id="region"
                                 placeholder="Enter region you are located in" name="region" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="number" placeholder="Enter phone number"
+                            <input type="text" class="form-control py-4 shadow-none" id="number" placeholder="Enter phone number"
                                 name="number" pattern="[7-9]{1}[0-9]{9}"
                                 title="Phone number with 7-9 and remaing 9 digit with 0-9" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control py-4" id="email" placeholder="Enter your email" name="email"
+                            <input type="email" class="form-control py-4 shadow-none" id="email" placeholder="Enter your email" name="email"
                                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                         </div>
                 
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="address" placeholder="Address" name="address"
+                            <input type="text" class="form-control py-4 shadow-none" id="address" placeholder="Address" name="address"
                                 required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="city" placeholder="City" name="city" required>
+                            <input type="text" class="form-control py-4 shadow-none" id="city" placeholder="City" name="city" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="State" placeholder="State" name="country" required>
+                            <input type="text" class="form-control py-4 shadow-none" id="State" placeholder="State" name="country" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="zipcode" placeholder="Zip Code" name="zipcode"
+                            <input type="text" class="form-control py-4 shadow-none" id="zipcode" placeholder="Zip Code" name="zipcode"
                                 pattern="[0-9]{6}" title="Five digit zip code" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="mark" placeholder="Any particular marks(optional)"
+                            <input type="text" class="form-control py-4 shadow-none" id="mark" placeholder="Any particular marks(optional)"
                                 name="mark">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control py-4" id="password" placeholder="Enter New Password" name="password">
+                            <input type="text" class="form-control py-4 shadow-none" id="password" placeholder="Enter New Password" name="password">
                         </div>
                         <div class="form-group">
-                            <button class="btn px-4" onclick="window.location.href='RestaurantCaterer.html'" aria-pressed="true" id="cancelBtn" style="background-color: #B6C8BC;"> Cancel</button>
-                            <button class="btn px-4" aria-pressed="true" id="saveBtn" style="background-color: #B6C8BC;"> Save</button>
+                            <button class="btn px-4 shadow-none" onclick="window.location.href='NGO.html'" aria-pressed="true" id="cancelBtn" style="background-color: #B6C8BC;"> Cancel</button>
+                            <button class="btn px-4 shadow-none" aria-pressed="true" id="saveBtn" style="background-color: #B6C8BC;"> Save</button>
                         </div>
 			        </div>
+                    <br><br>
 		    </div>
 	    </div>
 	</div>
       
 
 	<!-- Javascript -->
-    <script src="js/rcEditProfile.js"></script>
+    <script src="js/ngoEditProfile.js"></script>
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>

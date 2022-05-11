@@ -1,313 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="wide wow-animation" lang="en">
+    <head>
+        <title>About</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" href="images/logoicon.svg" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Roboto:wght@300;400;700&amp;display=swap">
+        
+        <!-- Website Icon  -->
+        <link rel="shortcut icon" href="images/logoicon.svg">
 
-<head>
-    <title>About</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Roboto:wght@300;400;700&amp;display=swap">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/homepage.css">
+        <link href="css/about.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <header class="section page-header">
+            <!--Navbar-->
+            <div class="rd-navbar-wrap">
+              <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                <div class="rd-navbar-main-outer">
+                  <div class="rd-navbar-main">
+                    <!--Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                      <!--Navbar Toggle-->
+                      <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                      <!--Navbar Brand-->
+                      <div class="rd-navbar-brand">
+                        <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo.svg" alt="" width="200" height="67" loading="lazy"/><img class="brand-logo-light" src="images/logo-inverse-334x134.png" alt="" width="200" height="67" loading="lazy"/></a>
+                      </div>
+                    </div>
+                    <div class="rd-navbar-main-element">
+                      <div class="rd-navbar-nav-wrap">
+                        <ul class="rd-navbar-nav">
+                          <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                          </li>
+                          <li class="rd-nav-item active"><a class="rd-nav-link" href="about.html">About</a>
+                          </li>
+                          <li class="rd-nav-item"><a class="rd-nav-link" href="feed.html">Feed</a>
+                          </li>
+                          <li class="rd-nav-item"><a class="rd-nav-link" href="#footer">Contact Us</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  <div id="uStatus" class='menu-list-item btn-group'></div>
+                    <script>
+                        if(sessionStorage.getItem("username")){
+                            document.getElementById("uStatus").innerHTML = '<div class="rd-navbar-aside"><button class="rd-navbar-btn btn btn-secondary" id="myProfile"><a href="NGO.html" style="color:white;">My Profile</a></button></div><div class="px-4 rd-navbar-aside"><button class="rd-navbar-btn btn btn-primary"><a href="logout.html" style="color:white;">Logout</a></button></div>';
+                        }else{
+                            document.getElementById("uStatus").innerHTML = '<div class="rd-navbar-aside rd-navbar-collapse"><button class="rd-navbar-btn btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal">Login</button></div>';
+                        }
+                    </script>
+                  </div>
+                </div>
+              </nav>
+            </div>
+        </header>
     
-    <!-- Website Icon  -->
-    <link rel="shortcut icon" href="images/icon.svg">
+        <div class="container">
+            <div class="pt-5 m-auto row pb-5 mt-5">
+                <div class="col-sm-6">
+                    <h1 class="pb-5">About Us</h1>
+                    <h3 class="mb-3">An Initiative by M. Sc. (IT), DAIICT Students</h3>
+                    <p>Waste food management and donation website have been developed to provide food to the people in need from the people or organizations where there is already some food available that is going to waste. Therefore, simultaneously this web application is also beneficial in reducing the food waste problem.</p>
+                    <div class="button">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/Aboutus-Food.jpg" class="rounded-3 img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="aboutteam">
+            <div class="container py-5">
+                <div class="row text-center text-white">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="display-4">About Team</h1>
+                        
+                    </div>
+                </div>
+            </div><!-- End -->
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/homepage.css">
-    <link rel="stylesheet" href="css/about.css">
-</head>
+            <div class="container">
+                <div class="row text-center justify-content-center">
 
-<body>
-    <header class="section page-header">
-        <!--Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!--Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!--Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!--Navbar Brand-->
-                  <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo.svg" alt="" width="200" height="67" loading="lazy"/><img class="brand-logo-light" src="images/logo-inverse-334x134.png" alt="" width="200" height="67" loading="lazy"/></a>
+                    <!-- Team item -->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Sarvaiya Aniket</h5>
+                        </div>
+                    </div><!-- End -->
+
+                    <!-- Team item -->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Savani Jaykumar</h5>
+                        </div>
+                    </div><!-- End -->
+
+                    <!-- Team item -->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Keyur Thakkar</h5>
+                        </div>
+                    </div><!-- End -->
+
+                    <!-- Team item -->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Deepak Dadlani</h5>
+                        </div>
+                    </div><!-- End -->
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/femaleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Neelam Gagnani</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Parth Karmur</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Meet Kalaraiya</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Abhishek Singh Chauhan</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/femaleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Krina Vipani</h5>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 mb-5">
+                        <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                                src="images/maleAvatar.png" alt="" width="100"
+                                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                            <h5 class="mb-0">Hamza Zaveri</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- Login -->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="background-image:url(../images/background-item.png)">
+            <div class="modal-header">
+              <h4 class="modal-title">Login</h4>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- <form class="rd-mailform text-start" data-form-output="form-output-global" data-form-type="contact" method="post" action=""> -->
+                <div class="row row-20">
+                  <div class="col-sm-12">
+                    <div class="form-wrap">
+                      <select class="form-control form-input shadow-none" name="" id="role">
+                        <option class="form-label" value="" disabled selected>Who are you?</option>
+                        <option class="form-label" value="NGO">NGO</option>
+                        <option class="form-label" value="Restaurant">Restaurant</option>
+                        <option class="form-label" value="Caterer">Caterer</option>
+                    </select>
+                  </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-wrap"> 
+                      <input class="form-input" id="email" type="email" name="email" data-constraints="@Required @Email" placeholder="Email" pattern="[^@\s]+@[^@\s]+" title="Invalid email address" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-wrap">
+                      <input class="form-input" type="password" value="" id="pwd" data-constraints="@Required @Numeric" placeholder="Password" required>
+                    </div>
                   </div>
                 </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="support-us.html">Support Us</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="feed.html">Feed</a>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
-                      </li>
-                    </ul>
-                  </div>
+                <br>
+                <a href="" class="forgot-pass">Forgot Password?</a>
+                <div class="form-button btn-group-1">
+                  <button class="btn btn-sm btn-primary" type="submit" id="signin">Login</button><small>Not registered?</small><a class="btn btn-sm btn-secondary" href="registration.html"><span class="btn-icon fa fa-paypal"></span><span>Register</span></a>
                 </div>
-                <div class="rd-navbar-aside rd-navbar-collapse">
-                  <button class="rd-navbar-btn btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal">Login</button>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-    </header>
-    <div class="container">
-        <div class="pt-5 m-auto row pb-5">
-            <div class="col-sm-6">
-                <h1 class="pb-5">About Us</h1>
-                <h3>Lorem ipsum dolor sit amet, consectetur adipisicing</h3>
-                <p>Waste food management and donation website have been developed to provide food to the people in need from the people or organizations where there is already some food available that is going to waste. Therefore, simultaneously this web application is also beneficial in reducing the food waste problem.</p>
-                <div class="button">
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <img src="images/Aboutus-Food.jpg" class="rounded-3 img-fluid">
-            </div>
-        </div>
-    </div>
-    <div class="aboutteam">
-        <div class="container py-5">
-            <div class="row text-center text-white">
-                <div class="col-lg-8 mx-auto">
-                    <h1 class="display-4">About Team</h1>
-                    
-                </div>
-            </div>
-        </div><!-- End -->
-
-
-        <div class="container">
-            <div class="row text-center justify-content-center">
-
-                <!-- Team item -->
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=1" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">Sarvaiya Aniket</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                           
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div><!-- End -->
-
-                <!-- Team item -->
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=2" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">Savani Jaykumar</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                           
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div><!-- End -->
-
-                <!-- Team item -->
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">Hamza Zaveri</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div><!-- End -->
-
-                <!-- Team item -->
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=4" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                           
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div><!-- End -->
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=5" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                            
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=6" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                           
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=7" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                            
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=8" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                            
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=9" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                            
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 mb-5">
-                    <div class="bg-white rounded shadow-sm py-5 px-4"><img
-                            src="https://picsum.photos/300/300?random=10" alt="" width="100"
-                            class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                        <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO -
-                            Founder</span>
-                        <ul class="social mb-0 list-inline mt-3">
-                            
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" class="social-link"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer class="section footer-classic small">
-        <div class="container">
-          <div class="row row-30">
-            <div class="col-xs-7 col-md-5">
-              <h4 class="footer-title">Contact us</h4>
-              <ul class="list">
-                <li>T: <a class="link-inherit" href="tel:#">(999) 999-9999</a>
-                </li>
-                <li>H: T-F: 7am – 3pm, S-SU: 8am – 3pm
-                </li>
-                <li>L : DAIICT, Gandhinagar, India
-                </li>
-              </ul>
-              <ul class="list">
-                <li>E: <a href="mailto:#">recyclinglives@gmail.com</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-xs-5 col-md-2 col-lg-3">
-              <h4 class="footer-title">Socials</h4>
-              <ul class="list-md">
-                <li><a class="link-secondary" href="#">Facebook</a></li>
-                <li><a class="link-secondary" href="#">Instagram</a></li>
-                <li><a class="link-secondary" href="#">Twitter</a></li>
-              </ul>
-            </div>
-            <div class="col-md-5 col-lg-4">
-              <h4 class="footer-title">Link</h4>
-              <ul class="list-md">
-                <li><a class="link-secondary" href="#">List of NGOs</a></li>
-                <li><a class="link-secondary" href="#">List of Restaurants</a></li>
-              </ul>
+              <!-- </form> -->
             </div>
           </div>
-          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Recycling Lives</span><span>.&nbsp;</span><a class="link-secondary" href="privacy-policy.html">Privacy Policy</a></p>
         </div>
-      </footer>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
+    </div>
 
+        <footer class="section footer-classic small" id="footer">
+            <div class="container">
+              <div class="row row-30">
+                <div class="col-xs-7 col-md-5">
+                  <h4 class="footer-title">Contact us</h4>
+                  <ul class="list">
+                    <li>T: <a class="link-inherit" href="tel:#">(999) 999-9999</a>
+                    </li>
+                    <li>H: T-F: 7am – 3pm, S-SU: 8am – 3pm
+                    </li>
+                    <li>L : DAIICT, Gandhinagar, India
+                    </li>
+                  </ul>
+                  <ul class="list">
+                    <li>E: <a href="mailto:#">recyclinglivesofficial@gmail.com</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xs-5 col-md-2 col-lg-3">
+                  <h4 class="footer-title">Socials</h4>
+                  <ul class="list-md">
+                    <li><a class="link-secondary" href="#">Facebook</a></li>
+                    <li><a class="link-secondary" href="#">Instagram</a></li>
+                    <li><a class="link-secondary" href="#">Twitter</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                  <h4 class="footer-title">Link</h4>
+                  <ul class="list-md">
+                    <li><a class="link-secondary" href="#">List of NGOs</a></li>
+                    <li><a class="link-secondary" href="#">List of Restaurants</a></li>
+                  </ul>
+                </div>
+              </div>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Recycling Lives</span><span>.&nbsp;</span><a class="link-secondary" href="privacy-policy.html">Privacy Policy</a></p>
+            </div>
+        </footer>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+        <!-- Signin Backend Code -->
+        <script src="js/SignIn.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+        <script src="js/config.js"></script>
+
+        <!-- Custom JS -->
+        <script src="js/core.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>

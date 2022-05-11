@@ -10,7 +10,7 @@
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
-    <script src="config.js"></script>
+    <script src="js/config.js"></script>
     <style>
         .modal-box {
             font-family: 'Poppins', sans-serif;
@@ -251,57 +251,12 @@
                             </div>
                         </div>
                     </div>
-                    <script>
-                    if(sessionStorage.getItem("username")){
-
-                        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-                        signin.onclick = function () {
-
-                            var email = document.getElementById("email").value;
-                            var pwd = document.getElementById("pwd").value;
-                            var role = document.getElementById("role").value;
-
-                            if (role == "" && email == "") {
-                               alert("Please Select Who are you !");
-                            } else {
-                                
-                                if (!email.match(mailformat)) {
-                                    alert("Please Enter Valid Email Address!");    
-                                }else if(pwd==""){
-                                    alert("Please Enter Password!");
-                                } else {
-                                    firebase.database().ref(role).orderByChild("email").equalTo(email).once("value", snapshot => {
-                                        if (snapshot.exists()) {
-                                            firebase.database().ref(role).orderByChild("password").equalTo(pwd).once("value",snap=>{
-                                                if(snap.exists()){
-                                                    snap.forEach(
-                                                        function(data){
-                                                            alert("Congrtulations! "+data.val().username+" You Have Successfully Login!");
-                                                            sessionStorage.setItem("username",data.val().username);
-                                                            window.location.href = "index.html";
-                                                        }
-                                                    )                                                  
-                                                }else{
-                                                    alert("Password not match!");
-                                                }
-                                            });
-                                            return true;
-                                        } else {
-                                            alert("Email not found");
-                                        }
-                                    });
-                                }
-                            }
-                        }
-                    }else{
-                        window.location.href = "index.html";
-                    }
-                    </script>
                 </div>
             </div>
         </div>
     </div>
+    <!-- SignIn Backedn Code Include -->
+    <script src="js/SignIn.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

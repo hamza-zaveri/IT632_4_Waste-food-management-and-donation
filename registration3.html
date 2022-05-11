@@ -6,7 +6,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Registration Page 3</title>
+	<title>Registration Step - 3</title>
+
+	<script>
+		// if(sessionStorage.getItem("role")){
+		// 	window.location.href = "index.html";
+		// }
+	</script>
+	
+    <!-- Website Icon  -->
+    <link rel="icon" href="images/logoicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.svg">
 
 	<!-- CSS -->
 	<link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
@@ -15,7 +25,7 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
-	<script src="config.js"></script>
+	<script src="js/config.js"></script>
 
 <body class="h-100">
 	<a href="registration2.html" class="btn mt-4" role="button" aria-pressed="true">
@@ -31,27 +41,31 @@
 				<div class="form-example card p-4" style="background-color:#CED8D1;border: #000000 1px solid;">
 				<h3 class="py-2"><strong>Delivery address</strong></h3>
 				<div class="form-group">
-					<input type="text" class="form-control py-4" id="address" placeholder="Address" name="address"
+					<input type="text" class="form-control py-4 shadow-none" id="address" placeholder="Address" name="address"
 						required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control py-4" id="city" placeholder="City" name="city" required>
+					<input type="text" class="form-control py-4 shadow-none" id="city" placeholder="City" name="city" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control py-4" id="State" placeholder="State" name="country" required>
+					<input type="text" class="form-control py-4 shadow-none" id="State" placeholder="State" name="country" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control py-4" id="zipcode" placeholder="Zip Code" name="zipcode"
+					<input type="text" class="form-control py-4 shadow-none" id="zipcode" placeholder="Zip Code" name="zipcode"
 						pattern="[0-9]{6}" title="Five digit zip code" required>
 				</div>
 				<div class="form-group">
-					<input type="text" class="form-control py-4" id="mark" placeholder="Any particular marks(optional)"
+					<input type="text" class="form-control py-4 shadow-none" id="mark" placeholder="Any particular marks(optional)"
 						name="mark">
 				</div>
-				<button class="btn" id="saveData" aria-pressed="true" style="background-color: #B6C8BC;"> Go Next <span
+				<button class="btn shadow-none" id="saveData" aria-pressed="true" style="background-color: #B6C8BC;"> Go Next <span
 						class="iconify" data-icon="bi:arrow-right-short" data-width="20"
 						data-height="20"></span></button>
 				<script>
+				if(!sessionStorage.getItem("role")){
+					alert("Please fillup entire registrtion form!");
+					window.location.href = "registration.html";
+				}else{
 					var zipcodeFormate = /(^\d{6}$)|(^\d{6}-\d{4}$)/;
 					saveData.onclick = function () {
 						var output = "";
@@ -61,10 +75,10 @@
 						var zipcode = document.getElementById("zipcode").value;
 						mark = document.getElementById("mark").value;
 						if (address == "" || city == "" || state == "" || zipcode == "") {
-							alert("Please fillup the form!");
+							alert("Please fillup the entire form!");
 						} else {
 							if (!zipcode.match(zipcodeFormate)) {
-								alert("Please enter valid Zipcode!");
+								alert("Please enter valid zipcode!");
 							} else {
 								if (mark == "") {
 									output = "default";
@@ -83,13 +97,16 @@
 									zipcode: zipcode,
 									mark: output
 								}).then(() => {
-									alert("Dear, " + sessionStorage.getItem("username") + " Congratulations! You Have Successfully Registration!");
-									sessionStorage.clear();
+									alert("Dear, " + sessionStorage.getItem("username") + " you are successfully registered!");
+									sessionStorage.removeItem("email");
+									sessionStorage.removeItem("password");
+									sessionStorage.removeItem("region");
 									window.location.href = "index.html";
 								});
 							}
 						}
 					}
+				}
 				</script>
 				<!-- End input fields -->
 				<!-- Form end -->
