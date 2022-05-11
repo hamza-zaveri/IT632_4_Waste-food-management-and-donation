@@ -5,17 +5,21 @@
 ->User Interface
 ->Registration pages(Frontend)
 ->Restaurant Posting(Frontend) and JS validation
+->Documentation
 
 202112065 - KALARIYA MEET HARESHBHAI 
-->JS validation for login and registration page
-->Login(Backend)
-->Registration page(Backend)
+->Login and Registration(Backend)
+->Feed(Backend)
+->Profiles(Backend)
+->Edit Profile(Backend)
 
 202112079 - DADLANI DEEPAK NARESHKUMAR 
 ->JS Validation for login and registration page
 ->HTML Validation for login and registration page
 ->Homepage(Frontend)
 ->Documentation
+->Helping Hand in Backend
+->Complete Analysis Class Diagram
 
 202112076 - SARVAIYA ANIKET MAHESHKUMAR
 ->Documentation
@@ -23,6 +27,7 @@
 ->Contact us page(Frontend)
 ->Restaurant profile(Frontend)
 ->NGO profile(Frontend)
+->Use case Description
 
 202112078 - JAYKUMAR SAVANI
 ->Documentation
@@ -30,26 +35,33 @@
 ->Contact us page(Frontend)
 ->Restaurant profile(Frontend)
 ->NGO profile(Frontend)
+->Use Case Description
 
 202112087 - KARMUR PARTH RAMSIBHAI 
 ->Documentation
 ->NGO delivery guy(Frontend)
 ->NGO Adding donation(Frontend)
+->Subsystem and Object Design
 
 202112089 - NEELAM KHUSHIRAM GAGNANI 
 ->Presentation
 ->Login Page(Frontend)
 ->Homepage(Frontend)
+->Possible Features and Requirment elicitation technique
 
 202112110 - THAKKAR KEYUR NARESHBHAI 
 ->Documentation
 ->HTML Validation for login and registration page
 ->Homepage(Frontend)
+->Whole User Interface Enhancment
+->Helping Hand in backend
+->cleared and completed little things
 
 202112117 - ABHISHEK SINGH CHAUHAN
 ->Documentation
 ->NGO delivery guy(Frontend)
 ->NGO Adding donation(Frontend)
+->Subsystem and Object Design
 
 Making of class analysis diagram
 ->Post of donation and View NGO's details : Aniket and Jay
