@@ -84,7 +84,16 @@ if(sessionStorage.getItem("role")!="NGO"){
   </header>
   
   <section class="section section-md bg-secondary-lightest">
-    <div style="margin-left: 100px;margin-top: -50px;margin-bottom: -50px;"> <button class="btn btn-secondary" onclick="window.location.replace('index.html'); return false;">Go back</button></div>
+    <div class="d-flex justify-content-between align-items-center">
+      
+        <button style="margin-left: 100px;margin-top: -50px;margin-bottom: -50px;" class="btn btn-secondary" onclick="window.location.replace('index.html'); return false;">
+          Go back
+        </button>
+      
+      <button style="margin-right: 100px;margin-top: -50px;margin-bottom: -50px;" class="btn btn-primary" id="create-post-btn" style="display: none;" onclick="window.location.replace('restaurantposting.html'); return false;">
+        Create Post
+      </button>
+    </div>
     <!-- <div class="container d-flex justify-content-between align-items-center"> <button class="btn btn-success" onclick="window.history.go(-1) ; return false;">Go back</button> <button class="btn btn-success" id="create-post-btn" style="display: none;" onclick="window.location.replace('restaurantposting.html'); return false;">Create Post</button></div> -->
     <div class="cards mb-0">
       <table class="carddata" id="ex-table">
