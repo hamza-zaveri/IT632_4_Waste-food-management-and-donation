@@ -1,7 +1,7 @@
 //Check if Resturant or Not 
 if (sessionStorage.getItem("role") != "Restaurant") {
 
-    alert("You Are Not Restaurant So You Not Post Yet");
+    alert("You Are Not Resturant So You Not Post Yet");
     window.location.href  = "index.html";
     
 } else {
