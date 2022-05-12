@@ -84,7 +84,7 @@ if(sessionStorage.getItem("role")!="NGO"){
   </header>
   
   <section class="section section-md bg-secondary-lightest">
-    <div class="container d-flex justify-content-between align-items-center"> <button class="btn btn-success" onclick="window.location.replace('index.html'); return false;">Go back</button> <button class="btn btn-success" id="create-post-btn" style="display: none;" onclick="window.location.replace('restaurantposting.html'); return false;">Create Post</button></div>
+    <div style="margin-left: 100px;margin-top: -50px;margin-bottom: -50px;"> <button class="btn btn-secondary" onclick="window.location.replace('index.html'); return false;">Go back</button></div>
     <!-- <div class="container d-flex justify-content-between align-items-center"> <button class="btn btn-success" onclick="window.history.go(-1) ; return false;">Go back</button> <button class="btn btn-success" id="create-post-btn" style="display: none;" onclick="window.location.replace('restaurantposting.html'); return false;">Create Post</button></div> -->
     <div class="cards mb-0">
       <table class="carddata" id="ex-table">
@@ -123,12 +123,13 @@ if(sessionStorage.getItem("role")!="NGO"){
         <div class="col-md-5 col-lg-4">
           <h4 class="footer-title">Link</h4>
           <ul class="list-md">
-            <li><a class="link-secondary" href="#">List of NGOs</a></li>
-            <li><a class="link-secondary" href="#">List of Restaurants</a></li>
+            <li><a class="link-secondary" href="index.html">Home</a></li>
+            <li><a class="link-secondary" href="about.html">About</a></li>
+            <li><a class="link-secondary" href="feed.html">Feed</a></li>
           </ul>
         </div>
       </div>
-      <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Recycling Lives</span><span>.&nbsp;</span><a class="link-secondary" href="privacy-policy.html">Privacy Policy</a></p>
+      <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Recycling Lives</span><span>.&nbsp;</span><a class="link-secondary" href="#">Privacy Policy</a></p>
     </div>
     </footer>
     <script>
