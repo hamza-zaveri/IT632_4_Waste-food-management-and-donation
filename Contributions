@@ -1,10 +1,13 @@
 202112057 - KRINA KALPESH VIPANI 
-->Presentation
+->Presentation(mid-evaluation)
+->Possible Features and Requirment elicitation technique
 
 202112061 - ZAVERI HAMZA ASIFBHAI 
 ->User Interface
 ->Registration pages(Frontend)
 ->Restaurant Posting(Frontend) and JS validation
+->Helping hand in frontend
+->Bugs fixing
 ->Documentation
 
 202112065 - KALARIYA MEET HARESHBHAI 
@@ -12,14 +15,18 @@
 ->Feed(Backend)
 ->Profiles(Backend)
 ->Edit Profile(Backend)
+->Whole backend and Database
 
 202112079 - DADLANI DEEPAK NARESHKUMAR 
 ->JS Validation for login and registration page
 ->HTML Validation for login and registration page
 ->Homepage(Frontend)
-->Documentation
+->Documentation(Mid-evaluation)
 ->Helping Hand in Backend
+->Bugs fixing
 ->Complete Analysis Class Diagram
+->Subsystem and Object Design
+->BlackBox Testing
 
 202112076 - SARVAIYA ANIKET MAHESHKUMAR
 ->Documentation
@@ -30,7 +37,7 @@
 ->Use case Description
 
 202112078 - JAYKUMAR SAVANI
-->Documentation
+->Documentation(Mid-evaluation)
 ->About us page(Frontend)
 ->Contact us page(Frontend)
 ->Restaurant profile(Frontend)
@@ -38,14 +45,14 @@
 ->Use Case Description
 
 202112087 - KARMUR PARTH RAMSIBHAI 
-->Documentation
+->Documentation(mid-evaluation)
 ->NGO delivery guy(Frontend)
 ->NGO Adding donation(Frontend)
 ->Subsystem and Object Design
 ->Deployment
 
 202112089 - NEELAM KHUSHIRAM GAGNANI 
-->Presentation
+->Presentation(mid-evalution)
 ->Login Page(Frontend)
 ->Homepage(Frontend)
 ->Possible Features and Requirment elicitation technique
@@ -55,8 +62,10 @@
 ->HTML Validation for login and registration page
 ->Homepage(Frontend)
 ->Whole User Interface Enhancment
-->Helping Hand in backend
-->cleared and completed little things
+->Helping hand in backend
+->Heliping hand in frontend
+->Bugs fixing
+->Cleared and completed little things
 ->Deployment
 
 202112117 - ABHISHEK SINGH CHAUHAN
