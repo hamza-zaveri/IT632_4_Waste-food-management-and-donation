@@ -1,4 +1,4 @@
-var mark = "";
+let marks = "";
 firebase.database().ref("NGO").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapshot){
     snapshot.forEach(function(childSnapshot){
         document.getElementById("name").value = childSnapshot.val().username;
@@ -10,19 +10,20 @@ firebase.database().ref("NGO").orderByChild("mobilenumber").equalTo(sessionStora
         document.getElementById("State").value = childSnapshot.val().state;
         document.getElementById("zipcode").value = childSnapshot.val().zipcode;
         if(childSnapshot.val().mark == "default"){
-            mark = "Mark not provided!";
-        }else{
-            mark = childSnapshot.val().mark;
+            marks = "Not provided!";
+        }else{ 
+            marks = childSnapshot.val().mark;
         }
-        document.getElementById("mark").value = mark;
+        document.getElementById("mark").value = marks;
         document.getElementById("password").value = childSnapshot.val().password;
     });
 });
 saveBtn.onclick = function(){
-    if(document.getElementById("mark").value == "Mark not provided"){
-        mark = "default";
+    let markss = "";
+    if(document.getElementById("mark").value == "Not provided!"){
+        markss = "default";
     }else{
-        mark = document.getElementById("mark").value;
+        markss = document.getElementById("mark").value;
     }
     firebase.database().ref("NGO").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapShot){
         snapShot.forEach(function(childSnapshot){
@@ -35,7 +36,7 @@ saveBtn.onclick = function(){
                 city:document.getElementById("city").value,
                 state:document.getElementById("State").value,
                 zipcode:document.getElementById("zipcode").value,
-                mark:mark,
+                mark:markss,
                 password:document.getElementById("password").value
             }).then(()=>{
                 alert(document.getElementById("name").value + " Successfully Update Your Profile!");

@@ -54,7 +54,11 @@
                 <div id="uStatus" class='menu-list-item btn-group'></div>
                 <script>
                     if(sessionStorage.getItem("username")){
+                      if(sessionStorage.getItem("role")=="NGO"){
                         document.getElementById("uStatus").innerHTML = '<div class="rd-navbar-aside"><button class="rd-navbar-btn btn btn-secondary"><a href="NGO.html" style="color:white;">My Profile</a></button></div><div class="px-4 rd-navbar-aside"><button class="rd-navbar-btn btn btn-primary"><a href="logout.html" style="color:white;">Logout</a></button></div>';
+                      }else{
+                        document.getElementById("uStatus").innerHTML = '<div class="rd-navbar-aside"><button class="rd-navbar-btn btn btn-secondary"><a href="RestaurantCaterer.html" style="color:white;">My Profile</a></button></div><div class="px-4 rd-navbar-aside"><button class="rd-navbar-btn btn btn-primary"><a href="logout.html" style="color:white;">Logout</a></button></div>';
+                      }
                     }else{
                         document.getElementById("uStatus").innerHTML = '<div class="rd-navbar-aside rd-navbar-collapse"><button class="rd-navbar-btn btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal">Login</button></div>';
                     }

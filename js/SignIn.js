@@ -21,7 +21,7 @@ if (!sessionStorage.getItem("username")) {
                     if (snapshot.exists()) {
                         firebase.database().ref(role).orderByChild("password").equalTo(pwd).once("value", snap => {
                             if (snap.exists()) {
-                                snap.forEach(
+                                snapshot.forEach(
                                     function (data) {
                                         alert("Congrtulations! " + data.val().username + " logged in successfully!");
                                         sessionStorage.setItem("username", data.val().username);

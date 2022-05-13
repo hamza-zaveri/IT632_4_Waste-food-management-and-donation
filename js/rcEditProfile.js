@@ -1,3 +1,4 @@
+let marks = "";
 firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapshot){
     snapshot.forEach(function(childSnapshot){
         document.getElementById("name").value = childSnapshot.val().username;
@@ -8,11 +9,22 @@ firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessi
         document.getElementById("city").value = childSnapshot.val().city;
         document.getElementById("State").value = childSnapshot.val().state;
         document.getElementById("zipcode").value = childSnapshot.val().zipcode;
-        document.getElementById("mark").value = childSnapshot.val().mark;
+        if(childSnapshot.val().mark == "default"){
+            marks = "Not provided!";
+        }else{ 
+            marks = childSnapshot.val().mark;
+        }
+        document.getElementById("mark").value = marks;
         document.getElementById("password").value = childSnapshot.val().password;
     });
 });
 saveBtn.onclick = function(){
+    let markss = "";
+    if(document.getElementById("mark").value == "Not provided!"){
+        markss = "default";
+    }else{
+        markss = document.getElementById("mark").value;
+    }
     firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessionStorage.getItem("mnumber")).once('value',function(snapShot){
         snapShot.forEach(function(childSnapshot){
             firebase.database().ref("Restaurant/"+childSnapshot.key).update({
@@ -24,7 +36,7 @@ saveBtn.onclick = function(){
                 city:document.getElementById("city").value,
                 state:document.getElementById("State").value,
                 zipcode:document.getElementById("zipcode").value,
-                mark:document.getElementById("mark").value,
+                mark:markss,
                 password:document.getElementById("password").value
             }).then(()=>{
                 alert(document.getElementById("name").value + " Successfully Update Your Profile!");

@@ -16,7 +16,7 @@ firebase.database().ref("Restaurant").once("value", function (snapshots) {
           numOfDdone++;
           dish += parseInt(childCheck.val().Quantity);
           $({ Counter: 0 }).animate({
-            Counter: dish
+            Counter:dish
           }, {
             duration: 4000,
             easing: 'swing',
@@ -100,6 +100,7 @@ firebase.database().ref("Restaurant").once("value", function (snapshots) {
         content += '</div>';
         content += '<div class="itm col-lg-2 d-flex flex-column justify-content-around"> <div> <table> <tr> <td class="fw-bold">Cooked Time</td> </tr> <tr> <td>' + val.cookTime + ' pm</td> </tr> </table> </div> </div> <div class="itm col-lg-2 d-flex flex-column justify-content-around"> <div> <table> <tr> <td class="fw-bold">Remarks </td> </tr><tr> <td>' + val.mark + ', </td> </tr> </table> </div> <div> <table><tr> <td class="fw-bold">Restaurant No</td> </tr> <tr> <td class="fw-bold">+91 ' + chilsSnapshot.val().mobilenumber + '</td> </tr> </table> </div> </div> <div class="itm col-lg-2 d-flex flex-column justify-content-around status-itm"> <div> <table class="w-100"> <tr> <td class="fw-bold">Status</td> </tr> <tr> ' + ngStatus + ' </tr> </table> </div> </div>';
         content += '<hr class="mt-4">';
+        content += '</div>';
       });
       $('#ex-table').append(content);
     });

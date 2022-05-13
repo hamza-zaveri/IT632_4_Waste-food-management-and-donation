@@ -71,7 +71,7 @@ firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessi
                 }else{
                     dNo = "+91 "+ val.DeliveryContactN;
                 }
-                content += '';
+
                 content += '<h4>'+chilsSnapshot.val().username+'</h4><div class="row">';
                 content += '<div class="itm col-lg-2"><img src="https://picsum.photos/200" class="img-fluid"></div>';
                 content += '<div class="itm col-lg-2 d-flex flex-column justify-content-around">';
@@ -99,6 +99,7 @@ firebase.database().ref("Restaurant").orderByChild("mobilenumber").equalTo(sessi
                 content += '</div>';
                 content += '<div class="itm col-lg-2 d-flex flex-column justify-content-around"> <div> <table> <tr> <td class="fw-bold">Cooked Time</td> </tr> <tr> <td>'+val.cookTime+' pm</td> </tr> </table> </div> </div> <div class="itm col-lg-2 d-flex flex-column justify-content-around"> <div> <table> <tr> <td class="fw-bold">Remarks </td> </tr><tr> <td>'+val.mark+', </td> </tr> </table> </div> <div> <table><tr> <td class="fw-bold">Deliver No</td> </tr> <tr> <td class="fw-bold">'+dNo+'</td> </tr> </table> </div> </div> <div class="itm col-lg-2 d-flex flex-column justify-content-around status-itm"> <div> <table class="w-100"> <tr> <td class="fw-bold">Status</td> </tr> <tr> '+ngStatus+' </tr> </table> </div> </div>';
                 content += '<hr class="mt-4">';
+                content += '</div>';
             }); 
             $('#ex-table').append(content);
        });
